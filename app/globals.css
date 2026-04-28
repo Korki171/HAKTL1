@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+    /* CSS variables for theme-aware styling */
+    --page-bg: #000000;
+    --page-text: #ffffff;
+  }
+}
+
+:root.light {
+  --page-bg: #ffffff;
+  --page-text: #0f172a;
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+  }
+  
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .bg-gradient-h {
+    @apply bg-gradient-to-r from-blue-500 to-red-500;
+  }
+
+  .text-gradient-h {
+    @apply bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.landing-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.28) transparent;
+}
+
+.landing-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.landing-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.landing-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.5);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
