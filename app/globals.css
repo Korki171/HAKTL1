@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-slate-50 text-slate-900;
     /* CSS variables for theme-aware styling */
-    --page-bg: #000000;
-    --page-text: #ffffff;
+    --page-bg: #f8fafc;
+    --page-text: #0f172a;
   }
 }
 
